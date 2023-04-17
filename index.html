@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aree saggio capellino</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+
+  <!-- Load Leaflet code library - see updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+  <!-- Load jQuery and PapaParse to read data from a CSV file -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!--  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'> -->
+  <!-- Position the map with Cascading Style Sheet (CSS) -->
+  <style>
+    body { margin:0; padding:0; }
+    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
+  </style>
+
+</head>
+<body>
+
+  <!-- Insert HTML division tag to layout the map -->
+  <div id="map"></div>
+
+  <!-- Insert Javascript (.js) code to create the map -->
+  <script>
+
+  // Set up initial map center and zoom level
+  var map = L.map('map', {
+    center: [43.787535, 11.177305], // EDIT latitude, longitude to re-center map
+    zoom: 15,  // EDIT from 1 to 18 -- decrease to zoom out, increase to zoom in
+    scrollWheelZoom:true
+  });
+
+  /* Control panel to display map layers */
+  var controlLayers = L.control.layers( null, null, {
+    position: "topright",
+    collapsed: false
+  }).addTo(map);
+
+  // display Carto basemap tiles with light features and labels
+  var light = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {maxZoom: 22,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+  }).addTo(map); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+  controlLayers.addBaseLayer(light, 'Carto Light basemap');
+
+  /* Stamen colored terrain basemap tiles with labels */
+  var terrain = L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.png', {maxZoom: 22,
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+  }); // EDIT - insert or remove ".addTo(map)" before last semicolon to display by default
+  controlLayers.addBaseLayer(terrain, 'Stamen Terrain basemap');
+
+ 
+  var osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+  var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 22, attribution: osmAttrib });   
+  controlLayers.addBaseLayer(osm, 'OpenStreetmap');
+    
+  var googlemap =L.tileLayer('http://www.google.cn/maps/vt?lyrs=s@189&gl=cn&x={x}&y={y}&z={z}', {maxZoom: 22,attribution: 'Google'});
+  controlLayers.addBaseLayer(googlemap , 'Google map');
+   
+  // see more basemap options at https://leaflet-extras.github.io/leaflet-providers/preview/
+
+  // 1
+  var marker_area_1 = new L.Marker(new L.LatLng(43.7909742,11.1962289));
+  var popupContent_1 = '<strong>Area saggio 1</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_1.jpg" height="150px" width="150px"/>';
+  marker_area_1.bindPopup(popupContent_1);
+  map.addLayer(marker_area_1);
+
+  // 2
+  var marker_area_2 = new L.Marker(new L.LatLng(43.790805,11.1948171));
+  var popupContent_2 = '<strong>Area saggio 2</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_2.jpg" height="150px" width="150px"/>';
+  marker_area_2.bindPopup(popupContent_2);
+  map.addLayer(marker_area_2);
+
+ // 3
+  var marker_area_3 = new L.Marker(new L.LatLng(43.7906164,11.1945437));
+  var popupContent_3 = '<strong>Area saggio 3</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_3.jpg" height="150px" width="150px"/>';
+  marker_area_3.bindPopup(popupContent_3);
+  map.addLayer(marker_area_3);
+
+ // 4
+  var marker_area_4 = new L.Marker(new L.LatLng(43.7911286,11.1925786));
+  var popupContent_4 = '<strong>Area saggio 4</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_4.jpg" height="150px" width="150px"/>';
+  marker_area_4.bindPopup(popupContent_4);
+  map.addLayer(marker_area_4);
+
+ // 5
+  var marker_area_5 = new L.Marker(new L.LatLng(43.7906681,11.1851708));
+  var popupContent_5 = '<strong>Area saggio 5</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_5.jpg" height="150px" width="150px"/>';
+  marker_area_5.bindPopup(popupContent_5);
+  map.addLayer(marker_area_5);
+
+
+ // 6
+  var marker_area_6 = new L.Marker(new L.LatLng(43.7902313,11.1845565));
+  var popupContent_6 = '<strong>Area saggio 6</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_6.jpg" height="150px" width="150px"/>';
+  marker_area_6.bindPopup(popupContent_6);
+  map.addLayer(marker_area_6);
+
+
+ // 7
+  var marker_area_7 = new L.Marker(new L.LatLng(43.7898993,11.1796135));
+  var popupContent_7 = '<strong>Area saggio 7</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_7.jpg" height="150px" width="150px"/>';
+  marker_area_7.bindPopup(popupContent_7);
+  map.addLayer(marker_area_7);
+
+ // 8
+  var marker_area_8 = new L.Marker(new L.LatLng(43.78897,11.1678018));
+  var popupContent_8 = '<strong>Area saggio 8</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_8.jpg" height="150px" width="150px"/>';
+  marker_area_8.bindPopup(popupContent_8);
+  map.addLayer(marker_area_8);
+
+ // 9
+  var marker_area_9 = new L.Marker(new L.LatLng(43.7883245,11.1623808));
+  var popupContent_9 = '<strong>Area saggio 9</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_9.jpg" height="150px" width="150px"/>';
+  marker_area_9.bindPopup(popupContent_9);
+  map.addLayer(marker_area_9);
+
+
+ // 10
+  var marker_area_10 = new L.Marker(new L.LatLng(43.7880301,11.162298));
+  var popupContent_10 = '<strong>Area saggio 10</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_10.jpg" height="150px" width="150px"/>';
+  marker_area_10.bindPopup(popupContent_10);
+  map.addLayer(marker_area_10);
+
+
+
+ // 11
+  var marker_area_11 = new L.Marker(new L.LatLng(43.7878067,11.1606089));
+  var popupContent_11 = '<strong>Area saggio 11</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_11.jpg" height="150px" width="150px"/>';
+  marker_area_11.bindPopup(popupContent_11);
+  map.addLayer(marker_area_11);
+
+
+ // 12
+  var marker_area_12 = new L.Marker(new L.LatLng(43.7880553,11.1597526));
+  var popupContent_12 = '<strong>Area saggio 12</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_12.jpg" height="150px" width="150px"/>';
+  marker_area_12.bindPopup(popupContent_12);
+  map.addLayer(marker_area_12);
+
+
+ // 13
+
+  var marker_area_13 = new L.Marker(new L.LatLng(43.7877059,11.1594662));
+  var popupContent_13 = '<strong>Area saggio 13</strong><br><img src="http://149.139.8.55/data/aree_capellino/area_13.jpg" height="150px" width="150px"/>';
+  marker_area_13.bindPopup(popupContent_13);
+  map.addLayer(marker_area_13);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ map.attributionControl.setPrefix(
+    'View <a href="https://www.ibe.cnr.it/" target="_blank">IBE CNR</a>'
+  );
+
+  </script>
+</body>
+</html>
