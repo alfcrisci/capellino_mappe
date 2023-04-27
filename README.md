@@ -32,14 +32,4 @@ Urbane, TU) su cui effettuare ulteriori monitoraggi di dettaglio e simulazioni d
 modellistica ambientale. L’obiettivo è quindi quello di proporre soluzioni e interventi 
 indirizzati a migliorare le condizioni di vivibilità, in particolare riducendo le criticità 
 termiche, favorendo laddove possibile la biodiversità urbana.
-https://handsondataviz.org/leaflet-maps-with-csv.html
 
-## See other Leaflet templates
-* [Simple Leaflet map](https://github.com/HandsOnDataViz/leaflet-map-simple)
-* [Leaflet map with open data APIs](https://github.com/HandsOnDataViz/leaflet-maps-open-data-apis)
-* [Leaflet map with data from Socrata](https://github.com/HandsOnDataViz/leaflet-socrata)
-* [Leaflet polygon map with tabs](https://github.com/HandsOnDataViz/leaflet-map-polygon-tabs)
-* [Leaflet heatmap](https://github.com/HandsOnDataViz/leaflet-heatmap)
-* [Searcheable Map Template](https://github.com/HandsOnDataViz/searchable-map-template-csv)
-* [Leaflet Maps with Google Sheets](https://github.com/HandsOnDataViz/leaflet-maps-with-google-sheets)
-* [Leaflet Storymaps with Google Sheets](https://github.com/HandsOnDataViz/leaflet-storymaps-with-google-sheets)
