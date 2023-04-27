@@ -1,27 +1,37 @@
-# leaflet-map-csv
-Build a simple Leaflet map with point markers from a CSV file.
 
-![Screenshot](leaflet-map-csv.png)
+## Progetto
 
-## Demo
-https://handsondataviz.github.io/leaflet-map-csv/
+Aree di saggio progetto “Monitoraggio e mitigazione dei cambiamenti climatici: il modello di Firenze”
 
-Sample data of select universities and colleges around CT by HandsOnDataViz.
+![Screenshot](logo.png)
 
-## Make your own
+### Descrizione
 
-1. Press **Use this template** button to create a copy of this repository in your own GitHub account.
-2. Put your point data data inside `data.csv`. The only relevant columns that will be read by the template
-are `Latitude`, `Longitude`, and `Title` (displayed in a popup). Sample data:
-```
-Title,Latitude,Longitude
-Trinity College,41.745167,-72.69263
-Wesleyan University,41.55709,-72.65691
-```
+le attività scientifiche del progetto saranno indirizzate a studiare il fenomeno 
+della biodiversità a Firenze con due obiettivi specifici a diverse scale di dettaglio:
 
-For more information on customization, see [Leaflet documentation](https://leafletjs.com/).
+1. Obiettivo specifico 1 - Attività di ricerca condotte su un’area “laboratorio”, ossia 
+un’area di circa 16 ha (l’asta dell’Arno lunga circa 4 km sulla sponda destra idraulica 
+tra il Ponte all’Indiano e il ponte dell’Autostrada A1) in cui il CNR, con il supporto di 
+altri Partner, effettuerà alcune indagini e ricerche di dettaglio per supportare 
+scientificamente quelli che saranno gli effetti dell’intervento di inverdimento previsto 
+su quest’area. L’obiettivo è quindi quello di creare un modello di studio il più possibile 
+replicabile ed esportabile in altri contesti urbani e che tenga conto delle specificità 
+dell’area oggetto di studio. In particolare, il CNR studierà la situazione ecosistemica 
+attuale di questa area laboratorio e le migliorie o in generale gli impatti che si otterranno 
+dagli interventi previsti nel progetto.
 
-## HandsOnDataViz Tutorial
+2. Obiettivo specifico 2  - Attività di ricerca estese a tutto il territorio del comune di 
+Firenze che, in connessione con il Piano del Verde comunale, avrà la finalità di 
+individuare alcuni spazi tipicamente urbani, ma anche agricoli e forestali periurbani, 
+rappresentativi della città oggetto di studio. Questa attività, che inizierà di pari passo 
+con quelle previste sull’area laboratorio, permetterà, attraverso lo studio e 
+l’elaborazione di diversi indicatori urbani (fisici, morfologici, demografici, vegetali e 
+animali) spazializzati sull’intero territorio comunale, di individuare zone (Tipologie 
+Urbane, TU) su cui effettuare ulteriori monitoraggi di dettaglio e simulazioni di 
+modellistica ambientale. L’obiettivo è quindi quello di proporre soluzioni e interventi 
+indirizzati a migliorare le condizioni di vivibilità, in particolare riducendo le criticità 
+termiche, favorendo laddove possibile la biodiversità urbana.
 https://handsondataviz.org/leaflet-maps-with-csv.html
 
 ## See other Leaflet templates
